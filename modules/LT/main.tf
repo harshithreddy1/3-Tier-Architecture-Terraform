@@ -18,6 +18,8 @@ resource "aws_launch_template" "Frontend_LT" {
       }
     }
 }
+# resource_type tells AWS which resource should receive the tags when an instance is launched using the Launch Template.
+# EX, for instance or EBS volumes or network interfaces etc..
 
 resource "aws_launch_template" "Backend_LT" {
     name = var.Backend_LT_name
