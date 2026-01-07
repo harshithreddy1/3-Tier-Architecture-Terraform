@@ -3,6 +3,7 @@ resource "aws_lb" "ALB" {
     internal = var.ALB_internal
     load_balancer_type = var.ALB_load_balancer_type
     subnets = var.pub_subnets
+# Subnets tell AWS where to place the load balancer so it can receive traffic.
     security_groups = [var.ALB_SG]
 }
 
